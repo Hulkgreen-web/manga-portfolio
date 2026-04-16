@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-dbz-orange: #F85B1A;
+  --color-dbz-blue: #2E3192;
+  --color-dbz-yellow: #F8D316;
+  --color-dbz-dark: #1a1a1a;
+
+  --color-primary-50: #fff7ed;
+  --color-primary-100: #ffedd5;
+  --color-primary-200: #fed7aa;
+  --color-primary-300: #fdba74;
+  --color-primary-400: #fb923c;
+  --color-primary-500: #f97316;
+  --color-primary-600: #ea580c;
+  --color-primary-700: #c2410c;
+  --color-primary-800: #9a3412;
+  --color-primary-900: #7c2d12;
+  
+  --shadow-manga: 4px 4px 0px 0px rgba(0,0,0,1);
+  --shadow-manga-lg: 8px 8px 0px 0px rgba(0,0,0,1);
+  --shadow-manga-white: 4px 4px 0px 0px rgba(255,255,255,1);
+  --shadow-manga-lg-white: 8px 8px 0px 0px rgba(255,255,255,1);
+  
+  --border-width-3: 3px;
+  
+  --font-manga: 'Bangers', cursive;
+}
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .manga-font {
+  font-family: var(--font-manga);
+  letter-spacing: 0.05em;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .manga-card {
+    @apply border-3 border-black dark:border-white shadow-manga dark:shadow-manga-white bg-white dark:bg-dbz-dark transition-all duration-200;
+  }
+  
+  .manga-card:hover {
+    @apply -translate-x-1 -translate-y-1 shadow-manga-lg dark:shadow-manga-lg-white;
+  }
+
+  .halftone {
+    background-image: radial-gradient(rgba(0,0,0,0.1) 2px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  .dark .halftone {
+    background-image: radial-gradient(rgba(255,255,255,0.05) 2px, transparent 0);
+  }
+
+  .speed-lines {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.05) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact",
+    "logo": "PORTFOLIO."
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "subtitle": "Kamehameha!",
+    "cta": "VIEW MY POWER"
+  },
+  "sections": {
+    "projects": "LEGENDARY PROJECTS",
+    "experience": "WARRIOR'S JOURNEY",
+    "skills": "TECHNICAL ARSENAL",
+    "contact": "HELP CALL (OR PROJECT)"
+  },
+  "contact": {
+    "subtitle": "Send me your energy (or a simple message)!",
+    "email_label": "CAPSULE MAIL",
+    "radar_label": "Z RADAR",
+    "form": {
+      "name": "Warrior / Name",
+      "name_placeholder": "Your name",
+      "email": "Coordinates / Email",
+      "email_placeholder": "your@email.com",
+      "message": "Message / Special Attack",
+      "message_placeholder": "Your message...",
+      "submit": "SEND THE SPIRIT BOMB"
+    }
+  },
+  "projects": {
+    "github": "Code",
+    "demo": "Demo"
+  },
+  "portfolio": {
+    "role": "Fullstack Web Developer",
+    "bio": "Passionate about creating elegant and performant digital experiences. Specialized in React, TypeScript and Node.js.",
+    "projects": {
+      "ecommerce": {
+        "title": "E-Commerce App",
+        "description": "A complete e-commerce platform with cart and Stripe payment."
+      },
+      "taskmanager": {
+        "title": "Task Manager",
+        "description": "Real-time task management application with drag and drop."
+      }
+    },
+    "experiences": {
+      "techsolutions": {
+        "position": "Frontend Developer",
+        "description": [
+          "Development of new features for the main SaaS platform.",
+          "Performance optimization and accessibility improvement.",
+          "Mentoring junior developers."
+        ]
+      },
+      "startupinnov": {
+        "position": "Junior Fullstack Developer",
+        "description": [
+          "Design of RESTful APIs with Node.js.",
+          "Implementation of unit and integration tests.",
+          "Close collaboration with the UX/UI design team."
+        ]
+      }
+    },
+    "skills": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Outils": "Tools",
+      "Mobile": "Mobile"
+    }
+  },
+  "common": {
+    "present": "Present"
+  },
+  "footer": {
+    "trained_with": "TRAINED WITH REACT, TYPESCRIPT & TAILWIND CSS",
+    "max_power": "MAXIMUM POWER REACHED!"
+  }
+}

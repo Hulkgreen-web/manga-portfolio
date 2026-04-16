@@ -1,0 +1,84 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "logo": "PORTFOLIO."
+  },
+  "hero": {
+    "greeting": "Salut, je suis",
+    "subtitle": "Kamehameha !",
+    "cta": "VOIR MON POUVOIR"
+  },
+  "sections": {
+    "projects": "PROJETS LÉGENDAIRES",
+    "experience": "PARCOURS DU GUERRIER",
+    "skills": "ARSENAL TECHNIQUE",
+    "contact": "APPEL À L'AIDE (OU PROJET)"
+  },
+  "contact": {
+    "subtitle": "Envoyez-moi votre force (ou un simple message) !",
+    "email_label": "CAPSULE MAIL",
+    "radar_label": "RADAR Z",
+    "form": {
+      "name": "Guerrier / Nom",
+      "name_placeholder": "Votre nom",
+      "email": "Coordonnées / Email",
+      "email_placeholder": "votre@email.com",
+      "message": "Message / Attaque Spéciale",
+      "message_placeholder": "Votre message...",
+      "submit": "ENVOYER LE GENKIDAMA"
+    }
+  },
+  "projects": {
+    "github": "Code",
+    "demo": "Démo"
+  },
+  "portfolio": {
+    "role": "Développeur Web Fullstack",
+    "bio": "Passionné par la création d'expériences numériques élégantes et performantes. Spécialisé en React, TypeScript et Node.js.",
+    "projects": {
+      "ecommerce": {
+        "title": "E-Commerce App",
+        "description": "Une plateforme complète de commerce électronique avec panier et paiement Stripe."
+      },
+      "taskmanager": {
+        "title": "Gestionnaire de Task",
+        "description": "Application de gestion de tâches temps réel avec glisser-déposer."
+      }
+    },
+    "experiences": {
+      "techsolutions": {
+        "position": "Développeur Frontend",
+        "description": [
+          "Développement de nouvelles fonctionnalités pour la plateforme SaaS principale.",
+          "Optimisation des performances et amélioration de l'accessibilité.",
+          "Mentorat de développeurs juniors."
+        ]
+      },
+      "startupinnov": {
+        "position": "Développeur Fullstack Junior",
+        "description": [
+          "Conception d'APIs RESTful avec Node.js.",
+          "Mise en place de tests unitaires et d'intégration.",
+          "Collaboration étroite avec l'équipe de design UX/UI."
+        ]
+      }
+    },
+    "skills": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Outils": "Outils",
+      "Mobile": "Mobile"
+    }
+  },
+  "common": {
+    "present": "Présent"
+  },
+  "footer": {
+    "trained_with": "ENTRAÎNÉ AVEC REACT, TYPESCRIPT & TAILWIND CSS",
+    "max_power": "PUISSANCE MAXIMALE ATTEINTE !"
+  }
+}
