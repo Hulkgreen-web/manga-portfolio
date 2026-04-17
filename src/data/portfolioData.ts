@@ -22,12 +22,12 @@ export interface Experience {
 }
 
 export const portfolioData = {
-  name: "Ton Nom",
+  name: "Arnaud BOUILLON",
+  email: "abouillon1802@gmail.com",
   socials: [
     { name: 'GitHub', url: 'https://github.com', icon: Github },
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
-    { name: 'Twitter', url: 'https://twitter.com', icon: Twitter },
-    { name: 'Email', url: 'mailto:contact@tondomaine.com', icon: Mail },
+    { name: 'Email', url: 'mailto:abouillon1802@gmail.com', icon: Mail },
   ],
   projects: [
     {
@@ -47,24 +47,25 @@ export const portfolioData = {
     },
   ] as Project[],
   skills: [
-    { name: 'React', category: 'Frontend', icon: Layout },
-    { name: 'TypeScript', category: 'Frontend', icon: Code2 },
-    { name: 'Tailwind CSS', category: 'Frontend', icon: Layout },
+    { name: 'Java / Springboot', category: 'Backend', icon: Database },
     { name: 'Node.js', category: 'Backend', icon: Database },
-    { name: 'PostgreSQL', category: 'Backend', icon: Database },
-    { name: 'Docker', category: 'Outils', icon: Code2 },
-    { name: 'React Native', category: 'Mobile', icon: Smartphone },
+    { name: 'ASP.NET', category: 'Backend', icon: Database },
+    { name: 'SQL', category: 'Backend', icon: Database },
+    { name: 'JavaScript', category: 'Frontend', icon: Code2 },
+    { name: 'HTML / CSS', category: 'Frontend', icon: Layout },
+    { name: 'Python', category: 'Backend', icon: Database },
+    { name: 'C', category: 'Backend', icon: Database },
   ] as Skill[],
   experiences: [
     {
-      company: "Tech Solutions",
-      translationKey: "techsolutions",
-      period: "2022 - common.present",
+      company: "I-CITY Bruxelles",
+      translationKey: "icity",
+      period: "Juillet 2023 - Aout 2023",
     },
     {
-      company: "Startup Innov",
-      translationKey: "startupinnov",
-      period: "2020 - 2022",
+      company: "Institut Sacré-Coeur Mons",
+      translationKey: "sacrecoeur",
+      period: "Février 2022",
     },
   ] as Experience[],
 };

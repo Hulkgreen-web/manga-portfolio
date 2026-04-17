@@ -41,11 +41,11 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white dark:bg-dbz-dark transition-colors duration-300 relative">
+    <section id="contact" className="py-24 bg-dbz-light dark:bg-dbz-dark transition-colors duration-300 relative">
       <div className="absolute inset-0 halftone opacity-10 pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-4 uppercase italic transform -skew-x-6 drop-shadow-[4px_4px_0px_#2E3192]">
+          <h2 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-4 uppercase italic transform -skew-x-6 drop-shadow-[4px_4px_0px_#F85B1A]">
             {t('sections.contact')}
           </h2>
           <p className="text-xl text-slate-800 dark:text-slate-200 max-w-2xl mx-auto font-bold uppercase italic">

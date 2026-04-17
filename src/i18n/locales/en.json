@@ -37,8 +37,8 @@
     "demo": "Demo"
   },
   "portfolio": {
-    "role": "Fullstack Web Developer",
-    "bio": "Passionate about creating elegant and performant digital experiences. Specialized in React, TypeScript and Node.js.",
+    "role": "Application Developer",
+    "bio": "Currently a Bachelor student in Computer Science, I am passionate about full stack development. Curious and motivated, I am looking for new challenges and to progress within concrete and stimulating projects.",
     "projects": {
       "ecommerce": {
         "title": "E-Commerce App",
@@ -50,20 +50,19 @@
       }
     },
     "experiences": {
-      "techsolutions": {
-        "position": "Frontend Developer",
+      "icity": {
+        "position": "Java Developer (Observation Internship)",
         "description": [
-          "Development of new features for the main SaaS platform.",
-          "Performance optimization and accessibility improvement.",
-          "Mentoring junior developers."
+          "Acquisition of project management skills.",
+          "Learning the SCRUM methodology.",
+          "Using Git for project versioning."
         ]
       },
-      "startupinnov": {
-        "position": "Junior Fullstack Developer",
+      "sacrecoeur": {
+        "position": "English Teacher (Participatory Internship)",
         "description": [
-          "Design of RESTful APIs with Node.js.",
-          "Implementation of unit and integration tests.",
-          "Close collaboration with the UX/UI design team."
+          "Management of a group of students.",
+          "Implementation of communication techniques in front of a large audience."
         ]
       }
     },

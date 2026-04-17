@@ -37,8 +37,8 @@
     "demo": "Démo"
   },
   "portfolio": {
-    "role": "Développeur Web Fullstack",
-    "bio": "Passionné par la création d'expériences numériques élégantes et performantes. Spécialisé en React, TypeScript et Node.js.",
+    "role": "Développeur d'applications",
+    "bio": "Actuellement en Bachelier en informatique, je suis passionné par le développement full stack. Curieux et motivé, je cherche à relever de nouveaux défis et à progresser au sein de projets concrets et stimulants.",
     "projects": {
       "ecommerce": {
         "title": "E-Commerce App",
@@ -50,20 +50,19 @@
       }
     },
     "experiences": {
-      "techsolutions": {
-        "position": "Développeur Frontend",
+      "icity": {
+        "position": "Développeur Java (Stage d'observation)",
         "description": [
-          "Développement de nouvelles fonctionnalités pour la plateforme SaaS principale.",
-          "Optimisation des performances et amélioration de l'accessibilité.",
-          "Mentorat de développeurs juniors."
+          "Acquisition de compétences en gestion de projet.",
+          "Apprentissage de la méthodologie SCRUM.",
+          "Utilisation de Git pour le versionnage de projet."
         ]
       },
-      "startupinnov": {
-        "position": "Développeur Fullstack Junior",
+      "sacrecoeur": {
+        "position": "Enseignant en anglais (Stage participatif)",
         "description": [
-          "Conception d'APIs RESTful avec Node.js.",
-          "Mise en place de tests unitaires et d'intégration.",
-          "Collaboration étroite avec l'équipe de design UX/UI."
+          "Gestion d'un groupe d'élèves.",
+          "Mise en œuvre de techniques de communication face à un large public."
         ]
       }
     },

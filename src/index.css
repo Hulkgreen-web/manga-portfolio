@@ -1,11 +1,14 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700&display=swap');
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-dbz-orange: #F85B1A;
   --color-dbz-blue: #2E3192;
   --color-dbz-yellow: #F8D316;
   --color-dbz-dark: #1a1a1a;
+  --color-dbz-light: #fcfaf7;
 
   --color-primary-50: #fff7ed;
   --color-primary-100: #ffedd5;
@@ -58,7 +61,7 @@ body {
 
 @layer utilities {
   .manga-card {
-    @apply border-3 border-black dark:border-white shadow-manga dark:shadow-manga-white bg-white dark:bg-dbz-dark transition-all duration-200;
+    @apply border-3 border-black dark:border-white shadow-manga dark:shadow-manga-white bg-dbz-light dark:bg-dbz-dark transition-all duration-200;
   }
   
   .manga-card:hover {

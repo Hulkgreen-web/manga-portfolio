@@ -25,30 +25,43 @@ export const Skills = () => {
           {categories.map((category, idx) => (
             <motion.div
               key={category}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="manga-card p-8 border-dbz-yellow"
+              transition={{ delay: idx * 0.15, type: "spring" }}
+              className="manga-card p-8 border-dbz-yellow bg-white dark:bg-dbz-dark"
             >
               <h3 className="text-2xl font-black text-dbz-orange dark:text-dbz-yellow mb-6 uppercase italic border-b-4 border-black dark:border-white pb-2">
                 {t(`portfolio.skills.${category}`)}
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {portfolioData.skills
                   .filter(skill => skill.category === category)
-                  .map(skill => (
-                    <div key={skill.name} className="flex items-center justify-between group">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 border-2 border-black dark:border-white bg-dbz-yellow text-black group-hover:rotate-12 transition-transform">
-                          <skill.icon size={20} />
+                  .map((skill, sIdx) => (
+                    <div key={skill.name} className="group">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center gap-3">
+                          <motion.div 
+                            whileHover={{ rotate: 360 }}
+                            className="p-2 border-2 border-black dark:border-white bg-dbz-yellow text-black"
+                          >
+                            <skill.icon size={18} />
+                          </motion.div>
+                          <span className="text-black dark:text-white font-black uppercase italic text-sm tracking-tighter">{skill.name}</span>
                         </div>
-                        <span className="text-black dark:text-white font-black uppercase italic text-sm">{skill.name}</span>
+                        <span className="text-xs font-black text-dbz-orange italic">LVL. {80 + sIdx * 5}</span>
                       </div>
-                      <div className="flex gap-1">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <span key={star} className="text-dbz-orange text-xs">★</span>
-                        ))}
+                      {/* Power Level Bar */}
+                      <div className="h-4 border-2 border-black dark:border-white bg-slate-200 dark:bg-slate-700 overflow-hidden relative">
+                        <motion.div 
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${75 + (sIdx % 3) * 10}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.5, delay: 0.5 + idx * 0.1, ease: "easeOut" }}
+                          className="h-full bg-gradient-to-r from-dbz-orange to-dbz-yellow relative"
+                        >
+                          <div className="absolute inset-0 speed-lines opacity-30"></div>
+                        </motion.div>
                       </div>
                     </div>
                   ))}
