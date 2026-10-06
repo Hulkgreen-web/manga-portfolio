@@ -38,7 +38,7 @@ export const portfolioData = {
       image: "/images/projects/myplan_screen.webp",
       tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "https://github.com/Hulkgreen-web/MyPlan",
-      liveUrl: "https://example.com",
+      liveUrl: "https://myplanweb.netlify.app/",
     },
     {
       id: 2,
