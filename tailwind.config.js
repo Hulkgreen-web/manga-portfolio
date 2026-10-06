@@ -8,13 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        dbz: {
-          orange: '#F85B1A',
-          blue: '#2E3192',
-          yellow: '#F8D316',
-          dark: '#1a1a1a',
-        },
-        primary: {
+        brand: {
           50: '#fff7ed',
           100: '#ffedd5',
           200: '#fed7aa',
@@ -28,14 +22,13 @@ export default {
         },
       },
       boxShadow: {
-        'manga': '4px 4px 0px 0px rgba(0,0,0,1)',
-        'manga-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
-        'manga-white': '4px 4px 0px 0px rgba(255,255,255,1)',
-      },
-      borderWidth: {
-        '3': '3px',
+        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+        'soft-lg': '0 10px 30px -4px rgba(0, 0, 0, 0.08)',
+        'glow': '0 0 25px -5px rgba(249, 115, 22, 0.35)',
       },
     },
   },
   plugins: [],
 }
+
+

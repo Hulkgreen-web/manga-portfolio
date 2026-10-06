@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Moon, Sun, Menu, X, Languages } from 'lucide-react';
+import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
 import { useDarkMode } from '../hooks/useDarkMode';
 import { useTranslation } from 'react-i18next';
 
 export const Navbar = () => {
   const { isDark, toggle } = useDarkMode();
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'fr' ? 'en' : 'fr';
@@ -23,107 +32,117 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-dbz-light dark:bg-dbz-dark border-b-4 border-black dark:border-white transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <motion.div 
-            whileHover={{ scale: 1.1, rotate: -5 }}
-            className="flex-shrink-0 font-bold text-3xl text-dbz-orange manga-font italic transform -skew-x-12 cursor-default"
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'glass-nav shadow-sm py-3' 
+        : 'bg-transparent py-5'
+    }`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          <a 
+            href="#hero" 
+            className="flex items-center gap-2.5 group cursor-pointer"
           >
-            {t('navbar.logo')}
-          </motion.div>
-          
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-white font-mono font-bold text-xs shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
+              &gt;_
+            </div>
+            <span className="font-mono font-bold text-base tracking-tight text-stone-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+              ~/arnaud<span className="text-orange-600 dark:text-orange-400">.dev</span>
+            </span>
+          </a>
+
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+          <nav className="hidden md:flex items-center gap-1 bg-stone-100/80 dark:bg-stone-900/80 backdrop-blur-md p-1.5 rounded-full border border-stone-200/80 dark:border-stone-800/80">
+            {navLinks.map((link, idx) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="relative text-black dark:text-white hover:text-dbz-orange dark:hover:text-dbz-yellow transition-colors font-bold uppercase tracking-tighter group"
+                className="px-3.5 py-1.5 text-xs font-medium font-mono text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white hover:bg-white dark:hover:bg-stone-800 rounded-full transition-all duration-200 group"
               >
-                {link.name}
-                <motion.span 
-                  className="absolute bottom-[-4px] left-0 w-0 h-1 bg-dbz-orange transition-all group-hover:w-full"
-                  whileHover={{ width: '100%' }}
-                />
+                <span className="text-orange-600 dark:text-orange-400 font-semibold mr-1">0{idx + 1}.</span>
+                <span>{link.name}</span>
               </a>
             ))}
-            <div className="flex items-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={toggleLanguage}
-                className="p-2 border-2 border-black dark:border-white shadow-manga dark:shadow-manga-white bg-dbz-blue text-white hover:bg-dbz-orange transition-all font-bold"
-                title={i18n.language === 'fr' ? 'Switch to English' : 'Passer au Français'}
+          </nav>
+
+          {/* Action buttons */}
+          <div className="hidden md:flex items-center gap-2">
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-stone-700 dark:text-stone-200 bg-stone-100 dark:bg-stone-800/80 hover:bg-stone-200 dark:hover:bg-stone-700 border border-stone-200 dark:border-stone-700 transition-all cursor-pointer"
+              title={i18n.language === 'fr' ? 'Switch to English' : 'Passer au Français'}
+              aria-label="Switch Language"
+            >
+              <Globe size={14} className="text-orange-500" />
+              <span className="uppercase">{i18n.language === 'fr' ? 'EN' : 'FR'}</span>
+            </button>
+
+            <button
+              onClick={toggle}
+              className="p-2 rounded-full text-stone-700 dark:text-stone-200 bg-stone-100 dark:bg-stone-800/80 hover:bg-stone-200 dark:hover:bg-stone-700 border border-stone-200 dark:border-stone-700 transition-all cursor-pointer"
+              aria-label="Toggle dark mode"
+            >
+              <motion.div
+                key={isDark ? 'dark' : 'light'}
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
               >
-                <div className="flex items-center gap-1">
-                  <Languages size={18} />
-                  <span className="text-xs uppercase">{i18n.language === 'fr' ? 'EN' : 'FR'}</span>
-                </div>
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.1, rotate: 180 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={toggle}
-                className="p-2 border-2 border-black dark:border-white shadow-manga dark:shadow-manga-white bg-dbz-yellow text-black hover:bg-dbz-orange transition-all"
-                aria-label="Toggle dark mode"
-              >
-                {isDark ? <Sun size={20} /> : <Moon size={20} />}
-              </motion.button>
-            </div>
+                {isDark ? <Sun size={17} className="text-amber-400" /> : <Moon size={17} className="text-stone-700" />}
+              </motion.div>
+            </button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu triggers */}
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleLanguage}
-              className="p-2 border-2 border-black dark:border-white bg-dbz-blue text-white"
+              className="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700"
             >
-              <span className="text-xs font-bold uppercase">{i18n.language === 'fr' ? 'EN' : 'FR'}</span>
+              {i18n.language === 'fr' ? 'EN' : 'FR'}
             </button>
             <button
               onClick={toggle}
-              className="p-2 border-2 border-black dark:border-white bg-dbz-yellow text-black"
+              className="p-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700"
+              aria-label="Toggle theme"
             >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              {isDark ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 border-2 border-black dark:border-white bg-white dark:bg-dbz-dark text-black dark:text-white"
+              className="p-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-200 dark:border-stone-700"
+              aria-label="Toggle navigation menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-dbz-dark border-b-4 border-black dark:border-white overflow-hidden"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden glass-card mx-4 mt-2 p-4 rounded-2xl shadow-xl space-y-1"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navLinks.map((link, idx) => (
-                <motion.a
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: idx * 0.05 }}
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2 text-black dark:text-white font-black uppercase italic hover:bg-dbz-orange hover:text-white transition-all border-l-4 border-transparent hover:border-black dark:hover:border-white"
-                >
-                  {link.name}
-                </motion.a>
-              ))}
-            </div>
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block px-4 py-2.5 text-sm font-medium text-stone-700 dark:text-stone-200 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-stone-800/80 rounded-xl transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </header>
   );
 };
+

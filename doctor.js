@@ -13,8 +13,6 @@ const CONFIG = {
   envExample: '.env.example',
   minDiskSpaceGB: 1,
   services: [
-    { name: 'PostgreSQL', host: '127.0.0.1', port: 5432 },
-    { name: 'Redis', host: '127.0.0.1', port: 6379 },
   ],
 };
 

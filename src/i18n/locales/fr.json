@@ -2,82 +2,103 @@
   "navbar": {
     "home": "Accueil",
     "projects": "Projets",
-    "experience": "Expérience",
+    "experience": "Expériences",
     "skills": "Compétences",
     "contact": "Contact",
-    "logo": "PORTFOLIO."
+    "logo": "Arnaud.dev"
   },
   "hero": {
-    "greeting": "Salut, je suis",
-    "subtitle": "Kamehameha !",
-    "cta": "VOIR MON POUVOIR"
+    "badge": "Disponible pour de nouvelles opportunités",
+    "greeting": "Bonjour, je suis",
+    "role": "Développeur Full Stack",
+    "cta_projects": "Découvrir mes projets",
+    "cta_contact": "Me contacter"
   },
   "sections": {
-    "projects": "PROJETS LÉGENDAIRES",
-    "experience": "PARCOURS DU GUERRIER",
-    "skills": "ARSENAL TECHNIQUE",
-    "contact": "APPEL À L'AIDE (OU PROJET)"
+    "projects": "Projets Récents",
+    "experience": "Parcours Professionnel",
+    "skills": "Compétences Techniques",
+    "contact": "Prendre Contact"
   },
   "contact": {
-    "subtitle": "Envoyez-moi votre force (ou un simple message) !",
-    "email_label": "CAPSULE MAIL",
-    "radar_label": "RADAR Z",
+    "subtitle": "Un projet, une opportunité ou une question ? N'hésitez pas à m'écrire !",
+    "email_label": "Adresse Email",
+    "social_label": "Réseaux & Liens",
     "form": {
-      "name": "Guerrier / Nom",
-      "name_placeholder": "Votre nom",
-      "email": "Coordonnées / Email",
-      "email_placeholder": "votre@email.com",
-      "message": "Message / Attaque Spéciale",
-      "message_placeholder": "Votre message...",
-      "submit": "ENVOYER LE GENKIDAMA"
+      "name": "Nom & Prénom",
+      "name_placeholder": "Ex: Marie Dupont",
+      "email": "Adresse Email",
+      "email_placeholder": "marie@exemple.com",
+      "message": "Votre message",
+      "message_placeholder": "Dites-moi en plus sur votre projet ou votre demande...",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
     }
   },
   "projects": {
-    "github": "Code",
-    "demo": "Démo"
+    "subtitle": "Une sélection de réalisations et de projets récents.",
+    "github": "Voir le code",
+    "demo": "Voir la démo",
+    "no_preview": "Aperçu bientôt disponible"
+  },
+  "experience": {
+    "subtitle": "Mon parcours académique et mes expériences professionnelles."
+  },
+  "skills": {
+    "subtitle": "Technologies, frameworks et outils que j'utilise au quotidien."
   },
   "portfolio": {
     "role": "Développeur d'applications",
-    "bio": "Actuellement en Bachelier en informatique, je suis passionné par le développement full stack. Curieux et motivé, je cherche à relever de nouveaux défis et à progresser au sein de projets concrets et stimulants.",
+    "bio": "Actuellement en Bachelier en informatique, je suis passionné par le développement full stack. Rigoureux et motivé, je conçois des applications web modernes, performantes et intuitives.",
     "projects": {
-      "ecommerce": {
-        "title": "E-Commerce App",
-        "description": "Une plateforme complète de commerce électronique avec panier et paiement Stripe."
+      "myplan": {
+        "title": "MyPlan",
+        "description": "Application web complète de planification de tâches et d'organisation du temps personnel et professionnel."
       },
       "taskmanager": {
-        "title": "Gestionnaire de Task",
-        "description": "Application de gestion de tâches temps réel avec glisser-déposer."
+        "title": "Task Manager",
+        "description": "Application interactive de gestion de tâches en temps réel avec glisser-déposer (Drag and Drop)."
       }
     },
     "experiences": {
-      "icity": {
-        "position": "Développeur Java (Stage d'observation)",
+      "triptyk": {
+        "position": "Stagiaire Développeur Full Stack",
         "description": [
-          "Acquisition de compétences en gestion de projet.",
-          "Apprentissage de la méthodologie SCRUM.",
-          "Utilisation de Git pour le versionnage de projet."
+          "Participation active à la conception et au développement d'une application web métier.",
+          "Développement de fonctionnalités front-end réactives et intégration d'APIs back-end.",
+          "Collaboration au sein d'une équipe agile pour résoudre les défis techniques et optimiser les performances."
+        ]
+      },
+      "icity": {
+        "position": "Stagiaire Développeur Java (Observation)",
+        "description": [
+          "Immersion dans les processus de gestion de projet au sein d'une structure publique IT.",
+          "Application pratique de la méthodologie Agile / SCRUM lors des sprints.",
+          "Utilisation des bonnes pratiques de versionnage collaboratif avec Git."
         ]
       },
       "sacrecoeur": {
-        "position": "Enseignant en anglais (Stage participatif)",
+        "position": "Stage d'immersion pédagogique",
         "description": [
-          "Gestion d'un groupe d'élèves.",
-          "Mise en œuvre de techniques de communication face à un large public."
+          "Gestion et animation d'un groupe en environnement éducatif.",
+          "Développement des compétences d'écoute, de pédagogie et de communication publique."
         ]
       }
     },
     "skills": {
       "Frontend": "Frontend",
       "Backend": "Backend",
-      "Outils": "Outils",
+      "Outils": "Outils & DevOps",
       "Mobile": "Mobile"
     }
   },
   "common": {
-    "present": "Présent"
+    "present": "Aujourd'hui"
   },
   "footer": {
-    "trained_with": "ENTRAÎNÉ AVEC REACT, TYPESCRIPT & TAILWIND CSS",
-    "max_power": "PUISSANCE MAXIMALE ATTEINTE !"
+    "rights": "Tous droits réservés.",
+    "built_with": "Conçu avec React, TypeScript & Tailwind CSS"
   }
 }
