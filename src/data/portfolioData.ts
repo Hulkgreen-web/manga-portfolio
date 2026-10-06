@@ -28,7 +28,7 @@ export const portfolioData = {
   email: "abouillon1802@gmail.com",
   socials: [
     { name: 'GitHub', url: 'https://github.com/Hulkgreen-web', icon: Github },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/arnaud-bouillon-91419435b', icon: Linkedin },
     { name: 'Email', url: 'mailto:abouillon1802@gmail.com', icon: Mail },
   ],
   projects: [

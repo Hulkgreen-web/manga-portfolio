@@ -4,7 +4,6 @@ import { Hero } from './sections/Hero';
 import { Projects } from './sections/Projects';
 import { Experience } from './sections/Experience';
 import { Skills } from './sections/Skills';
-import { Contact } from './sections/Contact';
 import { useTranslation } from 'react-i18next';
 import { portfolioData } from './data/portfolioData';
 
@@ -32,7 +31,6 @@ function App() {
         <Projects />
         <Experience />
         <Skills />
-        <Contact />
       </main>
       
       {/* Footer */}

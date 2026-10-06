@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, Terminal as TerminalIcon } from 'lucide-react';
+import { ArrowRight, Terminal as TerminalIcon } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useTranslation } from 'react-i18next';
 
@@ -114,7 +114,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-10"
+            className="flex items-center justify-center gap-4 w-full sm:w-auto mb-10"
           >
             <a
               href="#projects"
@@ -123,14 +123,6 @@ export const Hero = () => {
               <span className="text-amber-200">&gt;</span>
               <span>{t('hero.cta_projects')}</span>
               <ArrowRight size={16} />
-            </a>
-            
-            <a
-              href="#contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white dark:bg-stone-900/90 hover:bg-stone-50 dark:hover:bg-stone-800 text-stone-800 dark:text-stone-200 font-mono font-medium text-xs sm:text-sm border border-stone-200 dark:border-stone-800 shadow-sm hover:-translate-y-0.5 transition-all duration-200"
-            >
-              <Mail size={16} className="text-stone-500 dark:text-stone-400" />
-              <span>{t('hero.cta_contact')}</span>
             </a>
           </motion.div>
 

@@ -4,38 +4,18 @@
     "projects": "Projets",
     "experience": "Expériences",
     "skills": "Compétences",
-    "contact": "Contact",
     "logo": "Arnaud.dev"
   },
   "hero": {
     "badge": "Disponible pour de nouvelles opportunités",
     "greeting": "Bonjour, je suis",
     "role": "Développeur Full Stack",
-    "cta_projects": "Découvrir mes projets",
-    "cta_contact": "Me contacter"
+    "cta_projects": "Découvrir mes projets"
   },
   "sections": {
     "projects": "Projets Récents",
     "experience": "Parcours Professionnel",
-    "skills": "Compétences Techniques",
-    "contact": "Prendre Contact"
-  },
-  "contact": {
-    "subtitle": "Un projet, une opportunité ou une question ? N'hésitez pas à m'écrire !",
-    "email_label": "Adresse Email",
-    "social_label": "Réseaux & Liens",
-    "form": {
-      "name": "Nom & Prénom",
-      "name_placeholder": "Ex: Marie Dupont",
-      "email": "Adresse Email",
-      "email_placeholder": "marie@exemple.com",
-      "message": "Votre message",
-      "message_placeholder": "Dites-moi en plus sur votre projet ou votre demande...",
-      "submit": "Envoyer le message",
-      "sending": "Envoi en cours...",
-      "success": "Message envoyé avec succès !",
-      "error": "Une erreur est survenue. Veuillez réessayer."
-    }
+    "skills": "Compétences Techniques"
   },
   "projects": {
     "subtitle": "Une sélection de réalisations et de projets récents.",
@@ -51,11 +31,11 @@
   },
   "portfolio": {
     "role": "Développeur d'applications",
-    "bio": "Actuellement en Bachelier en informatique, je suis passionné par le développement full stack. Rigoureux et motivé, je conçois des applications web modernes, performantes et intuitives.",
+    "bio": "Titulaire d'un Bachelier en informatique, je suis passionné par le développement full stack. Rigoureux et motivé, je conçois des applications web modernes, performantes et intuitives.",
     "projects": {
       "myplan": {
         "title": "MyPlan",
-        "description": "Application web complète de planification de tâches et d'organisation du temps personnel et professionnel."
+        "description": "Application web permettant aux indépendants de gérer leurs finances personnelles et professionnelles."
       },
       "taskmanager": {
         "title": "Task Manager",

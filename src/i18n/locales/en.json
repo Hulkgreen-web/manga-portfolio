@@ -4,38 +4,18 @@
     "projects": "Projects",
     "experience": "Experience",
     "skills": "Skills",
-    "contact": "Contact",
     "logo": "Arnaud.dev"
   },
   "hero": {
     "badge": "Available for new opportunities",
     "greeting": "Hello, I am",
     "role": "Full Stack Developer",
-    "cta_projects": "View My Work",
-    "cta_contact": "Get in Touch"
+    "cta_projects": "View My Work"
   },
   "sections": {
     "projects": "Featured Projects",
     "experience": "Work Experience",
-    "skills": "Technical Skills",
-    "contact": "Contact Me"
-  },
-  "contact": {
-    "subtitle": "Have a project in mind, an opportunity, or a question? Feel free to reach out!",
-    "email_label": "Email Address",
-    "social_label": "Socials & Links",
-    "form": {
-      "name": "Full Name",
-      "name_placeholder": "e.g. Jane Doe",
-      "email": "Email Address",
-      "email_placeholder": "jane@example.com",
-      "message": "Your Message",
-      "message_placeholder": "Tell me more about your project or inquiry...",
-      "submit": "Send Message",
-      "sending": "Sending...",
-      "success": "Message sent successfully!",
-      "error": "An error occurred. Please try again."
-    }
+    "skills": "Technical Skills"
   },
   "projects": {
     "subtitle": "A curated selection of my recent works and applications.",
@@ -51,11 +31,11 @@
   },
   "portfolio": {
     "role": "Application Developer",
-    "bio": "Currently pursuing a Bachelor's degree in Computer Science, I am passionate about full stack development. Driven and detail-oriented, I build modern, high-performance, and intuitive web applications.",
+    "bio": "Having obtained a Bachelor's degree in Computer Science, I am passionate about full stack development. Driven and detail-oriented, I build modern, high-performance, and intuitive web applications.",
     "projects": {
       "myplan": {
         "title": "MyPlan",
-        "description": "Comprehensive task management and scheduling web application for personal and professional productivity."
+        "description": "Web application that allows freelancers to manage their personal and professional finances."
       },
       "taskmanager": {
         "title": "Task Manager",
