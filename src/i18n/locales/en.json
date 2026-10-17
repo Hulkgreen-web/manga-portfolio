@@ -45,6 +45,7 @@
     "experiences": {
       "triptyk": {
         "position": "Full Stack Developer Intern",
+        "period": "February 2026 - May 2026",
         "description": [
           "Contributed to the design and development of an enterprise web application.",
           "Implemented responsive front-end user interfaces and integrated robust back-end APIs.",
@@ -53,6 +54,7 @@
       },
       "icity": {
         "position": "Java Developer Intern (Observation)",
+        "period": "July 2023 - August 2023",
         "description": [
           "Gained hands-on insight into software project management in a public IT institution.",
           "Practiced Agile / SCRUM methodologies across active sprints.",
@@ -61,6 +63,7 @@
       },
       "sacrecoeur": {
         "position": "Educational Immersion Internship",
+        "period": "February 2022",
         "description": [
           "Supervised and facilitated learning activities for student groups.",
           "Honed public speaking, active listening, and pedagogical communication skills."

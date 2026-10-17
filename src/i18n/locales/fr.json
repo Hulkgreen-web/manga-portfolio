@@ -45,6 +45,7 @@
     "experiences": {
       "triptyk": {
         "position": "Stagiaire Développeur Full Stack",
+        "period": "Février 2026 - Mai 2026",
         "description": [
           "Participation active à la conception et au développement d'une application web métier.",
           "Développement de fonctionnalités front-end réactives et intégration d'APIs back-end.",
@@ -53,6 +54,7 @@
       },
       "icity": {
         "position": "Stagiaire Développeur Java (Observation)",
+        "period": "Juillet 2023 - Août 2023",
         "description": [
           "Immersion dans les processus de gestion de projet au sein d'une structure publique IT.",
           "Application pratique de la méthodologie Agile / SCRUM lors des sprints.",
@@ -61,6 +63,7 @@
       },
       "sacrecoeur": {
         "position": "Stage d'immersion pédagogique",
+        "period": "Février 2022",
         "description": [
           "Gestion et animation d'un groupe en environnement éducatif.",
           "Développement des compétences d'écoute, de pédagogie et de communication publique."

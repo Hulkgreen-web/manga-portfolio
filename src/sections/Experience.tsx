@@ -60,7 +60,7 @@ export const Experience = () => {
                   <div className="flex items-center gap-2">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-orange-50 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 border border-orange-200/60 dark:border-orange-800/60">
                       <Calendar size={12} />
-                      {exp.period.replace('common.present', t('common.present'))}
+                      {t(`portfolio.experiences.${exp.translationKey}.period`)}
                     </span>
                     <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-mono text-stone-500 dark:text-stone-400 bg-stone-100 dark:bg-stone-800/70">
                       <GitCommit size={11} className="text-orange-500" />

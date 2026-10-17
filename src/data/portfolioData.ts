@@ -18,7 +18,7 @@ export interface Skill {
 export interface Experience {
   company: string;
   translationKey: string;
-  period: string;
+  period?: string;
   roleType?: string;
 }
 
@@ -66,17 +66,14 @@ export const portfolioData = {
     {
       company: "Triptyk SRL",
       translationKey: "triptyk",
-      period: "Février 2026 - Mai 2026",
     },
     {
       company: "I-CITY Bruxelles",
       translationKey: "icity",
-      period: "Juillet 2023 - Août 2023",
     },
     {
       company: "Institut Sacré-Coeur Mons",
       translationKey: "sacrecoeur",
-      period: "Février 2022",
     },
   ] as Experience[],
 };
