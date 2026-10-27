@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Code2, Terminal as TerminalIcon } from 'lucide-react';
+import { Github, ExternalLink, Code2 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useTranslation } from 'react-i18next';
 
@@ -7,138 +7,111 @@ export const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <motion.span 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-xs font-mono font-medium uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800/60 px-3.5 py-1 rounded-full mb-3 inline-block"
-          >
-            &gt; ./projects --show-all
-          </motion.span>
-          <motion.h2 
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 dark:text-white mb-4 tracking-tight"
-          >
+    <section id="projects" className="py-24 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="flex flex-col items-start mb-14">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-semibold bg-stone-100 dark:bg-stone-900 text-stone-700 dark:text-stone-300 border border-stone-300 dark:border-stone-800 mb-3">
+            <span className="text-emerald-600 dark:text-emerald-400 font-bold">&gt;</span>
+            <span>{t('sections.projects_tag')}</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-stone-900 dark:text-white tracking-tight mb-3">
             {t('sections.projects')}
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-stone-600 dark:text-stone-400 max-w-xl mx-auto text-base sm:text-lg"
-          >
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 max-w-xl text-base sm:text-lg">
             {t('projects.subtitle')}
-          </motion.p>
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {portfolioData.projects.map((project, index) => (
-            <motion.div
+            <motion.article
               key={project.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.15, duration: 0.5 }}
-              whileHover={{ y: -6 }}
-              className="glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-orange-500/40 transition-all duration-300 flex flex-col group border border-stone-200/90 dark:border-stone-800"
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ delay: index * 0.1, duration: 0.4 }}
+              className="console-card rounded-2xl overflow-hidden flex flex-col group"
             >
-              {/* Terminal Window Header for Card */}
-              <div className="flex items-center justify-between px-4 py-2.5 bg-stone-100/90 dark:bg-stone-900/90 border-b border-stone-200/80 dark:border-stone-800/80 font-mono text-xs">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
-                </div>
-                <div className="text-[11px] text-stone-500 dark:text-stone-400 flex items-center gap-1">
-                  <TerminalIcon size={11} className="text-orange-500" />
-                  <span>app_{project.translationKey}.tsx</span>
-                </div>
-                <span className="text-[10px] text-orange-600 dark:text-orange-400 font-bold">#0{index + 1}</span>
-              </div>
-
-              {/* Project Preview */}
-              <div className="relative h-48 w-full overflow-hidden bg-stone-100 dark:bg-stone-900/50 border-b border-stone-200/80 dark:border-stone-800/80">
+              {/* Project Visual Container */}
+              <div className="relative h-56 w-full overflow-hidden bg-stone-100 dark:bg-[#121419] border-b border-stone-200 dark:border-stone-800 flex items-center justify-center">
                 {project.image ? (
                   <img
                     src={project.image}
                     alt={t(`portfolio.projects.${project.translationKey}.title`)}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
                     loading="lazy"
                   />
                 ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-orange-500/10 via-stone-100 to-amber-500/10 dark:from-orange-950/40 dark:via-stone-900/40 dark:to-amber-950/40 p-6 font-mono">
-                    <div className="w-12 h-12 rounded-xl bg-white dark:bg-stone-800 shadow-sm flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
-                      <Code2 size={24} className="text-orange-500" />
+                  <div className="w-full h-full flex flex-col items-center justify-center p-6 font-mono text-center">
+                    <div className="w-12 h-12 rounded-xl bg-stone-200 dark:bg-stone-800 flex items-center justify-center mb-3 text-emerald-600 dark:text-emerald-400">
+                      <Code2 size={24} />
                     </div>
-                    <span className="text-xs text-stone-500 dark:text-stone-400">
-                      // {t('projects.no_preview')}
+                    <span className="text-xs font-semibold text-stone-500 dark:text-stone-400">
+                      {t('projects.no_preview')}
                     </span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Tactical project number badge */}
+                <div className="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-stone-900/90 text-white font-mono text-[11px] font-bold border border-stone-700 shadow-sm">
+                  0{index + 1}
+                </div>
               </div>
 
-              {/* Project Details */}
-              <div className="p-6 flex flex-col flex-grow">
-                {/* Tech tags */}
-                <div className="flex gap-1.5 mb-4 flex-wrap">
+              {/* Project Meta & Description */}
+              <div className="p-6 sm:p-7 flex flex-col flex-grow">
+                {/* Tech stack tags */}
+                <div className="flex gap-1.5 mb-4 flex-wrap" aria-label="Technologies used">
                   {project.tags.map(tag => (
                     <span 
                       key={tag} 
-                      className="px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-stone-100 dark:bg-stone-800/90 text-stone-700 dark:text-stone-300 border border-stone-200/70 dark:border-stone-700/60"
+                      className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-medium bg-stone-100 dark:bg-stone-900 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-800"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                <h3 className="text-2xl font-bold text-stone-900 dark:text-white mb-2">
                   {t(`portfolio.projects.${project.translationKey}.title`)}
                 </h3>
 
-                <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-stone-600 dark:text-stone-300 text-sm leading-relaxed mb-6 flex-grow">
                   {t(`portfolio.projects.${project.translationKey}.description`)}
                 </p>
-                
-                {/* Actions */}
-                <div className="flex items-center gap-3 pt-2 border-t border-stone-100 dark:border-stone-800/60 font-mono">
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 transition-colors"
-                    >
-                      <Github size={14} />
-                      <span>$ code</span>
-                    </a>
-                  )}
+
+                {/* Real Action Links */}
+                <div className="flex items-center gap-3 pt-4 border-t border-stone-100 dark:border-stone-800/80">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-medium bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white shadow-sm shadow-orange-500/20 transition-all"
+                      rel="noreferrer"
+                      className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-mono font-bold flex items-center gap-1.5 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer"
                     >
-                      <ExternalLink size={14} />
-                      <span>$ demo</span>
+                      <span>{t('projects.demo')}</span>
+                      <ExternalLink size={13} />
+                    </a>
+                  )}
+
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-4 py-2 rounded-lg bg-stone-100 dark:bg-stone-900 hover:bg-stone-200 dark:hover:bg-stone-800 text-stone-800 dark:text-stone-200 border border-stone-300 dark:border-stone-700 text-xs font-mono font-semibold flex items-center gap-1.5 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-500 cursor-pointer"
+                    >
+                      <Github size={13} />
+                      <span>{t('projects.github')}</span>
                     </a>
                   )}
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
     </section>
   );
 };
-
-

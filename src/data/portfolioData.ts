@@ -1,3 +1,4 @@
+import type { LucideIcon } from 'lucide-react';
 import { Github, Linkedin, Mail, Code2, Database, Layout, Server, Terminal, Cpu, Smartphone, GitBranch, Layers } from 'lucide-react';
 
 export interface Project {
@@ -12,7 +13,7 @@ export interface Project {
 export interface Skill {
   name: string;
   category: 'Frontend' | 'Backend' | 'Outils' | 'Mobile';
-  icon: any;
+  icon: LucideIcon;
 }
 
 export interface Experience {
@@ -42,10 +43,10 @@ export const portfolioData = {
     },
     {
       id: 2,
-      translationKey: "taskmanager",
+      translationKey: "web-skeleton",
       image: "",
-      tags: ["React", "DND-Kit", "Supabase", "TypeScript"],
-      githubUrl: "https://github.com",
+      tags: ["React", "TypeScript", "Monorepo", "Vite", "Tailwind CSS", "Fastify"],
+      githubUrl: "https://github.com/Hulkgreen-web/web-skeleton",
     },
   ] as Project[],
   skills: [
@@ -60,7 +61,7 @@ export const portfolioData = {
     { name: 'Tailwind CSS / HTML5', category: 'Frontend', icon: Layout },
     { name: 'Git & GitHub', category: 'Outils', icon: GitBranch },
     { name: 'Docker / CI-CD', category: 'Outils', icon: Terminal },
-    { name: 'React Native', category: 'Mobile', icon: Smartphone },
+    { name: 'React PWA', category: 'Mobile', icon: Smartphone },
   ] as Skill[],
   experiences: [
     {

@@ -2,44 +2,79 @@
   "navbar": {
     "home": "Accueil",
     "projects": "Projets",
-    "experience": "Expériences",
     "skills": "Compétences",
-    "logo": "Arnaud.dev"
+    "experience": "Expériences",
+    "arcade_btn": "Arcade",
+    "arcade_tooltip": "Lancer le mini-jeu Penalty Arcade",
+    "switch_dark": "Passer en mode sombre",
+    "switch_light": "Passer en mode clair"
   },
   "hero": {
     "badge": "Disponible pour de nouvelles opportunités",
     "greeting": "Bonjour, je suis",
     "role": "Développeur Full Stack",
-    "cta_projects": "Découvrir mes projets"
+    "telemetry_stack": "Stack Principale",
+    "telemetry_tactics": "Méthodologie",
+    "telemetry_location": "Localisation",
+    "cta_projects": "Explorer mes projets",
+    "cta_arcade": "Penalty Arcade",
+    "cta_contact": "Me contacter",
+    "socials_label": "Réseaux"
   },
   "sections": {
     "projects": "Projets Récents",
+    "projects_tag": "production.manifest",
+    "skills": "Playbook Technique",
+    "skills_tag": "stack.formation",
     "experience": "Parcours Professionnel",
-    "skills": "Compétences Techniques"
+    "experience_tag": "career.timeline"
   },
   "projects": {
-    "subtitle": "Une sélection de réalisations et de projets récents.",
-    "github": "Voir le code",
-    "demo": "Voir la démo",
-    "no_preview": "Aperçu bientôt disponible"
-  },
-  "experience": {
-    "subtitle": "Mon parcours académique et mes expériences professionnelles."
+    "subtitle": "Une sélection de réalisations concrètes et d'applications modernes.",
+    "github": "Code Source",
+    "demo": "Démo en direct",
+    "no_preview": "Aperçu de conception"
   },
   "skills": {
-    "subtitle": "Technologies, frameworks et outils que j'utilise au quotidien."
+    "subtitle": "Technologies, langages et outils déployés au quotidien.",
+    "filter_all": "Toutes"
+  },
+  "experience": {
+    "subtitle": "Mon parcours académique et mes expériences en ingénierie logicielle."
+  },
+  "arcade": {
+    "title": "Penalty Shootout Cup",
+    "mute_sound": "Couper le son rétro",
+    "enable_sound": "Activer le son rétro",
+    "close": "Fermer le jeu",
+    "score_goals": "Buts",
+    "score_saves": "Arrêts",
+    "score_streak": "Série",
+    "score_total": "Tirs",
+    "aim_left": "Tirer à gauche",
+    "aim_center": "Tirer au centre",
+    "aim_right": "Tirer à droite",
+    "instructions": "Choisissez une zone pour marquer face au gardien bot.",
+    "saved_msg": "Arrêt du gardien ! Belle parade de KeeperBot.",
+    "goal_msg": "BUT ! Le ballon termine au fond des filets !",
+    "tip": "Touches 1, 2, 3 ou Flèches du clavier pour tirer",
+    "reset": "Recommencer",
+    "achieve_first_goal_title": "Premier But Marqué !",
+    "achieve_first_goal_desc": "Vous avez inscrit votre premier but dans l'arcade.",
+    "achieve_hattrick_title": "Coup du Chapeau !",
+    "achieve_hattrick_desc": "3 buts d'affilée sans aucun arrêt du gardien."
   },
   "portfolio": {
-    "role": "Développeur d'applications",
-    "bio": "Titulaire d'un Bachelier en informatique, je suis passionné par le développement full stack. Rigoureux et motivé, je conçois des applications web modernes, performantes et intuitives.",
+    "role": "Développeur Full Stack",
+    "bio": "Titulaire d'un Bachelier en informatique, je conçois des architectures logicielles fiables, performantes et centrées sur l'expérience utilisateur. Passionné par l'univers du jeu vidéo et la tactique du football, j'apporte rigueur, esprit d'équipe et créativité à chaque projet.",
     "projects": {
       "myplan": {
         "title": "MyPlan",
-        "description": "Application web permettant aux indépendants de gérer leurs finances personnelles et professionnelles."
+        "description": "Application web complète permettant aux indépendants de gérer avec précision leurs finances personnelles et professionnelles."
       },
-      "taskmanager": {
-        "title": "Task Manager",
-        "description": "Application interactive de gestion de tâches en temps réel avec glisser-déposer (Drag and Drop)."
+      "web-skeleton": {
+        "title": "Web Skeleton",
+        "description": "Architecture de démarrage monorepo moderne optimisée pour le développement web rapide et modulaire."
       }
     },
     "experiences": {
@@ -48,7 +83,7 @@
         "period": "Février 2026 - Mai 2026",
         "description": [
           "Participation active à la conception et au développement d'une application web métier.",
-          "Développement de fonctionnalités front-end réactives et intégration d'APIs back-end.",
+          "Développement de fonctionnalités front-end réactives et intégration d'APIs back-end sécurisées.",
           "Collaboration au sein d'une équipe agile pour résoudre les défis techniques et optimiser les performances."
         ]
       },
@@ -57,16 +92,16 @@
         "period": "Juillet 2023 - Août 2023",
         "description": [
           "Immersion dans les processus de gestion de projet au sein d'une structure publique IT.",
-          "Application pratique de la méthodologie Agile / SCRUM lors des sprints.",
-          "Utilisation des bonnes pratiques de versionnage collaboratif avec Git."
+          "Application pratique de la méthodologie Agile / SCRUM lors des cycles de sprint.",
+          "Utilisation rigoureuse des bonnes pratiques de versionnage collaboratif avec Git."
         ]
       },
       "sacrecoeur": {
         "position": "Stage d'immersion pédagogique",
         "period": "Février 2022",
         "description": [
-          "Gestion et animation d'un groupe en environnement éducatif.",
-          "Développement des compétences d'écoute, de pédagogie et de communication publique."
+          "Gestion et animation de groupes en environnement éducatif.",
+          "Développement des compétences d'écoute active, de pédagogie et de communication claire."
         ]
       }
     },

@@ -2,44 +2,79 @@
   "navbar": {
     "home": "Home",
     "projects": "Projects",
-    "experience": "Experience",
     "skills": "Skills",
-    "logo": "Arnaud.dev"
+    "experience": "Experience",
+    "arcade_btn": "Arcade",
+    "arcade_tooltip": "Launch Penalty Arcade Mini-Game",
+    "switch_dark": "Switch to dark mode",
+    "switch_light": "Switch to light mode"
   },
   "hero": {
     "badge": "Available for new opportunities",
     "greeting": "Hello, I am",
     "role": "Full Stack Developer",
-    "cta_projects": "View My Work"
+    "telemetry_stack": "Core Stack",
+    "telemetry_tactics": "Methodology",
+    "telemetry_location": "Location",
+    "cta_projects": "Explore Projects",
+    "cta_arcade": "Penalty Arcade",
+    "cta_contact": "Get in Touch",
+    "socials_label": "Socials"
   },
   "sections": {
     "projects": "Featured Projects",
-    "experience": "Work Experience",
-    "skills": "Technical Skills"
+    "projects_tag": "production.manifest",
+    "skills": "Technical Playbook",
+    "skills_tag": "stack.formation",
+    "experience": "Career Match Log",
+    "experience_tag": "career.timeline"
   },
   "projects": {
-    "subtitle": "A curated selection of my recent works and applications.",
+    "subtitle": "A curated selection of real-world applications and modern software.",
     "github": "Source Code",
     "demo": "Live Demo",
-    "no_preview": "Preview coming soon"
-  },
-  "experience": {
-    "subtitle": "My academic background and professional journey."
+    "no_preview": "Architecture preview"
   },
   "skills": {
-    "subtitle": "Languages, frameworks, and developer tools I work with."
+    "subtitle": "Languages, frameworks, and developer tooling deployed daily.",
+    "filter_all": "All"
+  },
+  "experience": {
+    "subtitle": "Academic foundation and hands-on software engineering internships."
+  },
+  "arcade": {
+    "title": "Penalty Shootout Cup",
+    "mute_sound": "Mute retro sound",
+    "enable_sound": "Enable retro sound",
+    "close": "Close arcade",
+    "score_goals": "Goals",
+    "score_saves": "Saves",
+    "score_streak": "Streak",
+    "score_total": "Shots",
+    "aim_left": "Shoot Left",
+    "aim_center": "Shoot Center",
+    "aim_right": "Shoot Right",
+    "instructions": "Pick a target zone to shoot past KeeperBot.",
+    "saved_msg": "Saved! Impressive stop by KeeperBot.",
+    "goal_msg": "GOAL! Top corner finish!",
+    "tip": "Use keys 1, 2, 3 or Arrow keys to shoot",
+    "reset": "Restart",
+    "achieve_first_goal_title": "First Goal Scored!",
+    "achieve_first_goal_desc": "You scored your first goal in the Penalty Arcade.",
+    "achieve_hattrick_title": "Hat-trick Hero!",
+    "achieve_hattrick_desc": "3 consecutive goals scored against KeeperBot."
   },
   "portfolio": {
-    "role": "Application Developer",
-    "bio": "Having obtained a Bachelor's degree in Computer Science, I am passionate about full stack development. Driven and detail-oriented, I build modern, high-performance, and intuitive web applications.",
+    "role": "Full Stack Developer",
+    "bio": "Holder of a Bachelor's degree in Computer Science, I engineer robust, performant software architectures centered on user experience. Inspired by video games and football tactics, I bring discipline, team synergy, and creative precision to every engineering challenge.",
     "projects": {
       "myplan": {
         "title": "MyPlan",
-        "description": "Web application that allows freelancers to manage their personal and professional finances."
+        "description": "Comprehensive web application enabling freelancers to accurately manage personal and business finances."
       },
-      "taskmanager": {
-        "title": "Task Manager",
-        "description": "Real-time interactive Kanban task board application featuring smooth drag-and-drop mechanics."
+      "web-skeleton": {
+        "title": "Web Skeleton",
+        "description": "Modern monorepo starter architecture optimized for modular full-stack web development."
       }
     },
     "experiences": {
@@ -47,26 +82,26 @@
         "position": "Full Stack Developer Intern",
         "period": "February 2026 - May 2026",
         "description": [
-          "Contributed to the design and development of an enterprise web application.",
-          "Implemented responsive front-end user interfaces and integrated robust back-end APIs.",
-          "Collaborated with an agile engineering team to resolve technical challenges and boost performance."
+          "Contributed actively to the architecture and implementation of an enterprise business application.",
+          "Engineered responsive front-end user flows and integrated secure back-end APIs.",
+          "Collaborated within an agile squad to solve technical challenges and optimize system performance."
         ]
       },
       "icity": {
         "position": "Java Developer Intern (Observation)",
         "period": "July 2023 - August 2023",
         "description": [
-          "Gained hands-on insight into software project management in a public IT institution.",
-          "Practiced Agile / SCRUM methodologies across active sprints.",
-          "Applied best practices for collaborative version control using Git."
+          "Gained structured insight into software project workflows within a public IT institution.",
+          "Applied Agile and SCRUM methodologies across active sprint cycles.",
+          "Practiced disciplined collaborative version control using Git."
         ]
       },
       "sacrecoeur": {
         "position": "Educational Immersion Internship",
         "period": "February 2022",
         "description": [
-          "Supervised and facilitated learning activities for student groups.",
-          "Honed public speaking, active listening, and pedagogical communication skills."
+          "Facilitated and supervised learning activities for student groups.",
+          "Developed active listening, pedagogy, and clear verbal communication skills."
         ]
       }
     },
@@ -82,6 +117,6 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "built_with": "Built with React, TypeScript & Tailwind CSS"
+    "built_with": "Crafted with React, TypeScript & Tailwind CSS"
   }
 }
