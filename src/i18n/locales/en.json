@@ -33,7 +33,10 @@
     "subtitle": "A curated selection of real-world applications and modern software.",
     "github": "Source Code",
     "demo": "Live Demo",
-    "no_preview": "Architecture preview"
+    "no_preview": "Architecture preview",
+    "prev": "Previous project",
+    "next": "Next project",
+    "indicator": "Go to project {{index}}"
   },
   "skills": {
     "subtitle": "Languages, frameworks, and developer tooling deployed daily.",
@@ -66,7 +69,9 @@
   },
   "portfolio": {
     "role": "Full Stack Developer",
-    "bio": "Holder of a Bachelor's degree in Computer Science, I engineer robust, performant software architectures centered on user experience. Inspired by video games and football tactics, I bring discipline, team synergy, and creative precision to every engineering challenge.",
+    "bio": "Software developer blending tactical discipline with modern execution. Grounded in team synergy and keen attention to detail, I build reliable, responsive applications from back-end logic to the user interface.",
+    "bio_lead": "Software developer blending tactical discipline with modern execution.",
+    "bio_body": "Grounded in team synergy and keen attention to detail, I build reliable, responsive applications from back-end logic to the user interface.",
     "projects": {
       "myplan": {
         "title": "MyPlan",
@@ -75,16 +80,42 @@
       "web-skeleton": {
         "title": "Web Skeleton",
         "description": "Modern monorepo starter architecture optimized for modular full-stack web development."
+      },
+      "poke-native": {
+        "title": "Poké Native",
+        "description": "Native mobile Pokémon application built with React Native and Expo, featuring TanStack Query for cache synchronization and Reanimated for smooth UI transitions."
+      },
+      "codefighter": {
+        "title": "CodeFighter",
+        "description": "Turn-based combat game crafted in C++ with the SFML graphics engine, modular state architecture, and Python build automation scripts."
+      },
+      "doctor-js": {
+        "title": "Project Doctor",
+        "description": "Local CLI diagnostic utility automating developer environment healthchecks: Node compatibility, .env integrity, TCP service connectivity, and disk headroom."
+      },
+      "fastapi-cicd": {
+        "title": "FastAPI CI/CD",
+        "description": "Modern REST API developed with FastAPI and PostgreSQL via SQLAlchemy, packaged with automated continuous integration workflows on GitHub Actions."
       }
     },
     "experiences": {
+      "icare": {
+        "position": "Full Stack Engineer",
+        "period": "August 2026 - October 2026",
+        "description": [
+          "Contributed in a development squad to build the MVP of I-Car, a mobile fleet management application (tracking, car policy, maintenance).",
+          "Engineered a secure peer-to-peer communication flow between employees to coordinate vehicle handovers with verifiable data authenticity.",
+          "Delivered and validated a fully functional MVP, successfully proving the core product workflows to the client."
+        ]
+      },
       "triptyk": {
-        "position": "Full Stack Developer Intern",
+        "position": "Full Stack Developer",
         "period": "February 2026 - May 2026",
         "description": [
-          "Contributed actively to the architecture and implementation of an enterprise business application.",
-          "Engineered responsive front-end user flows and integrated secure back-end APIs.",
-          "Collaborated within an agile squad to solve technical challenges and optimize system performance."
+          "Development of TPKAIZEN, a dashboard enabling SMEs to pilot and monitor n8n automations transparently and intuitively.",
+          "Conception and development of the backend API (Node.js, Fastify) and contribution to the monitoring interface (Ember.js).",
+          "Integration of AI into n8n automations to streamline workflow processes.",
+          "Implementation of the Human-in-the-Loop mechanism (AI proposes, human validates): ensuring AI is safely adopted by non-technical teams with human oversight at each critical step."
         ]
       },
       "icity": {

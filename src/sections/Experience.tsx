@@ -71,6 +71,20 @@ export const Experience = () => {
                     </li>
                   ))}
                 </ul>
+
+                {/* Tech stack tags */}
+                {exp.tags && exp.tags.length > 0 && (
+                  <div className="flex gap-1.5 mt-4 pt-4 border-t border-stone-200 dark:border-stone-800/80 flex-wrap" aria-label="Technologies used">
+                    {exp.tags.map(tag => (
+                      <span 
+                        key={tag} 
+                        className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-medium bg-stone-100 dark:bg-stone-900 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-800"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

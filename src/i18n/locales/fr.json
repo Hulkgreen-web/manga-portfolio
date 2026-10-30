@@ -33,7 +33,10 @@
     "subtitle": "Une sélection de réalisations concrètes et d'applications modernes.",
     "github": "Code Source",
     "demo": "Démo en direct",
-    "no_preview": "Aperçu de conception"
+    "no_preview": "Aperçu de conception",
+    "prev": "Projet précédent",
+    "next": "Projet suivant",
+    "indicator": "Aller au projet {{index}}"
   },
   "skills": {
     "subtitle": "Technologies, langages et outils déployés au quotidien.",
@@ -66,7 +69,9 @@
   },
   "portfolio": {
     "role": "Développeur Full Stack",
-    "bio": "Titulaire d'un Bachelier en informatique, je conçois des architectures logicielles fiables, performantes et centrées sur l'expérience utilisateur. Passionné par l'univers du jeu vidéo et la tactique du football, j'apporte rigueur, esprit d'équipe et créativité à chaque projet.",
+    "bio": "Concepteur d'applications web alliant rigueur tactique et exécution moderne. Sens du collectif forgé en équipe, goût du détail et vision globale : je développe des solutions logicielles stables et réactives, du back-end à l'interface.",
+    "bio_lead": "Concepteur d'applications web alliant rigueur tactique et exécution moderne.",
+    "bio_body": "Sens du collectif forgé en équipe, goût du détail et vision globale : je développe des solutions logicielles stables et réactives, du back-end à l'interface.",
     "projects": {
       "myplan": {
         "title": "MyPlan",
@@ -75,16 +80,42 @@
       "web-skeleton": {
         "title": "Web Skeleton",
         "description": "Architecture de démarrage monorepo moderne optimisée pour le développement web rapide et modulaire."
+      },
+      "poke-native": {
+        "title": "Poké Native",
+        "description": "Application mobile native de consultation Pokémon développée avec React Native et Expo, intégrant TanStack Query pour la synchronisation des données et Reanimated pour les transitions d'écran."
+      },
+      "codefighter": {
+        "title": "CodeFighter",
+        "description": "Jeu de combat au tour par tour en C++ avec moteur graphique SFML, architecture modulaire par états et scripts Python d'automatisation de compilation."
+      },
+      "doctor-js": {
+        "title": "Project Doctor",
+        "description": "Outil CLI de diagnostic local automatisant les vérifications d'environnement de développement : compatibilité Node, intégrité des variables .env, connectivité des services et espace disque."
+      },
+      "fastapi-cicd": {
+        "title": "FastAPI CI/CD",
+        "description": "API REST moderne développée avec FastAPI et PostgreSQL via SQLAlchemy, intégrant un pipeline d'intégration continue automatisé sur GitHub Actions."
       }
     },
     "experiences": {
+      "icare": {
+        "position": "Full Stack Engineer",
+        "period": "Août 2026 - Octobre 2026",
+        "description": [
+          "Participation en équipe à la conception et au développement du MVP d'I-Car, application mobile de gestion de flotte automobile (suivi, car policy, entretiens).",
+          "Conception et intégration d'un tunnel de communication sécurisé entre utilisateurs pour organiser l'échange de véhicules avec garantie d'authenticité et de confidentialité.",
+          "Livraison d'un MVP fonctionnel et testé, validant avec succès le concept et les parcours clés auprès du client."
+        ]
+      },
       "triptyk": {
-        "position": "Stagiaire Développeur Full Stack",
+        "position": "Développeur Full Stack",
         "period": "Février 2026 - Mai 2026",
         "description": [
-          "Participation active à la conception et au développement d'une application web métier.",
-          "Développement de fonctionnalités front-end réactives et intégration d'APIs back-end sécurisées.",
-          "Collaboration au sein d'une équipe agile pour résoudre les défis techniques et optimiser les performances."
+          "Développement de TPKAIZEN, dashboard permettant aux PME de piloter et superviser leurs automatisations n8n de manière transparente et intuitive.",
+          "Conception et implémentation de l'API backend (Node.js, Fastify) et contribution à l'interface de suivi (Ember.js).",
+          "Intégration de l'IA dans les automatisations n8n pour optimiser le traitement des flux de travail.",
+          "Mise en place du Human-in-the-Loop (l'IA propose, l'humain valide) : défi relevé de rendre l'IA utilisable en toute confiance par des équipes non techniques, avec contrôle humain à chaque étape critique."
         ]
       },
       "icity": {

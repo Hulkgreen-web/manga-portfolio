@@ -21,6 +21,7 @@ export interface Experience {
   translationKey: string;
   period?: string;
   roleType?: string;
+  tags?: string[];
 }
 
 export const portfolioData = {
@@ -48,6 +49,34 @@ export const portfolioData = {
       tags: ["React", "TypeScript", "Monorepo", "Vite", "Tailwind CSS", "Fastify"],
       githubUrl: "https://github.com/Hulkgreen-web/web-skeleton",
     },
+    {
+      id: 3,
+      translationKey: "poke-native",
+      image: "",
+      tags: ["React Native", "Expo", "TypeScript", "TanStack Query", "Reanimated"],
+      githubUrl: "https://github.com/Hulkgreen-web/poke-native",
+    },
+    {
+      id: 4,
+      translationKey: "codefighter",
+      image: "",
+      tags: ["C++17", "SFML 2.5", "CMake", "Python"],
+      githubUrl: "https://github.com/mehdi-apdev/CodeFighter",
+    },
+    {
+      id: 5,
+      translationKey: "doctor-js",
+      image: "",
+      tags: ["Node.js", "CLI", "DevOps", "TypeScript"],
+      githubUrl: "https://github.com/Hulkgreen-web/doctor-js",
+    },
+    {
+      id: 6,
+      translationKey: "fastapi-cicd",
+      image: "",
+      tags: ["Python", "FastAPI", "PostgreSQL", "Docker", "CI/CD"],
+      githubUrl: "https://github.com/Hulkgreen-web/learn-ci-cd",
+    },
   ] as Project[],
   skills: [
     { name: 'Java / Spring Boot', category: 'Backend', icon: Server },
@@ -65,8 +94,14 @@ export const portfolioData = {
   ] as Skill[],
   experiences: [
     {
+      company: "I-care Group",
+      translationKey: "icare",
+      tags: ["React PWA", "Fastify", "MongoDB"],
+    },
+    {
       company: "Triptyk SRL",
       translationKey: "triptyk",
+      tags: ["Node.js", "Fastify", "n8n", "Ember.js"],
     },
     {
       company: "I-CITY Bruxelles",

@@ -39,9 +39,14 @@ export const Hero = ({ onOpenArcade }: HeroProps) => {
             <span>{t('hero.role')}</span>
           </p>
 
-          <p className="text-base sm:text-lg text-stone-700 dark:text-stone-300 max-w-2xl leading-relaxed mb-8">
-            {t('portfolio.bio')}
-          </p>
+          <div className="max-w-2xl mb-8 space-y-2">
+            <p className="text-lg sm:text-xl font-medium text-stone-900 dark:text-stone-100 leading-snug">
+              {t('portfolio.bio_lead')}
+            </p>
+            <p className="text-sm sm:text-base text-stone-600 dark:text-stone-400 leading-relaxed">
+              {t('portfolio.bio_body')}
+            </p>
+          </div>
 
           {/* Tactical Profile Deck (Gaming & Football Thematic Telemetry) */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10 font-mono text-xs">

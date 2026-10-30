@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Trophy, RotateCcw, Volume2, VolumeX, Shield, Target } from 'lucide-react';
+import { X, Trophy, RotateCcw, Volume2, VolumeX, Target } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface ArcadeModalProps {
@@ -232,64 +232,108 @@ export const ArcadeModal = ({ isOpen, onClose, onUnlockAchievement }: ArcadeModa
             </div>
 
             {/* Interactive Pitch Stage */}
-            <div className="p-6 bg-gradient-to-b from-[#10141a] to-[#121c17] relative select-none">
-              {/* Football Goalpost Frame */}
-              <div className="w-full h-44 rounded-xl border-4 border-stone-300 relative bg-[#0a1510] overflow-hidden flex flex-col justify-end shadow-inner">
-                {/* Goal Net Grid texture */}
+            <div className="p-5 sm:p-6 bg-gradient-to-b from-[#10141a] via-[#111a15] to-[#121c17] relative select-none">
+              {/* Football Pitch Arena / Goal Frame */}
+              <div className="w-full max-w-[420px] mx-auto h-52 sm:h-56 rounded-xl border-2 border-stone-700/80 relative bg-[#0a1510] overflow-hidden flex flex-col justify-end shadow-inner">
+                {/* Full goal net background texture across the entire cage */}
                 <div 
-                  className="absolute inset-0 opacity-15"
+                  className="absolute inset-0 opacity-15 pointer-events-none"
                   style={{
                     backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
-                    backgroundSize: '16px 16px'
+                    backgroundSize: '22px 22px'
                   }}
                 />
 
-                {/* Keeper Bot */}
-                <motion.div
-                  className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center z-10"
-                  animate={{
-                    x: keeperDir === 'left' ? -90 : keeperDir === 'right' ? 90 : 0,
-                    y: shotState === 'shooting' ? -15 : 0
+                {/* Subtle pitch turf glow */}
+                <div 
+                  className="absolute inset-0 opacity-20 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(ellipse at center, rgba(16, 185, 129, 0.25) 0%, transparent 70%)'
                   }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                >
-                  <div className="px-2 py-0.5 rounded bg-stone-900 border border-stone-700 text-[10px] font-mono text-emerald-300 mb-1 flex items-center gap-1 shadow-sm">
-                    <Shield size={10} />
-                    <span>KeeperBot.exe</span>
-                  </div>
-                  <div className="w-12 h-14 rounded-lg bg-emerald-700 border-2 border-emerald-400 flex items-center justify-center text-xs font-bold shadow-lg">
-                    🧤
-                  </div>
-                </motion.div>
+                />
 
-                {/* Target zones preview */}
-                <div className="absolute inset-0 grid grid-cols-3 pointer-events-none p-2">
-                  <div className="border border-dashed border-emerald-500/20 rounded-lg flex items-start justify-center pt-2">
-                    <span className="text-[10px] font-mono text-emerald-400/50">LEFT [1]</span>
-                  </div>
-                  <div className="border border-dashed border-emerald-500/20 rounded-lg flex items-start justify-center pt-2">
-                    <span className="text-[10px] font-mono text-emerald-400/50">CENTER [2]</span>
-                  </div>
-                  <div className="border border-dashed border-emerald-500/20 rounded-lg flex items-start justify-center pt-2">
-                    <span className="text-[10px] font-mono text-emerald-400/50">RIGHT [3]</span>
-                  </div>
+                {/* Goalkeeper SVG Vector Model (Scaled proportionnellement aux mains) */}
+                <div className="absolute inset-0 flex items-end justify-center overflow-hidden pointer-events-none pb-1 sm:pb-2">
+                  <motion.div
+                    className="flex items-center justify-center z-10"
+                    animate={{
+                      x: keeperDir === 'left' ? -95 : keeperDir === 'right' ? 95 : 0,
+                      y: shotState === 'shooting' ? -12 : 0,
+                      rotate: keeperDir === 'left' ? -12 : keeperDir === 'right' ? 12 : 0,
+                      scale: shotState === 'saved' ? 1.08 : 1,
+                    }}
+                    transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+                  >
+                    <img
+                      src="/images/projects/goalkeeper.svg"
+                      alt="Goalkeeper"
+                      className="w-32 sm:w-36 max-h-[105px] sm:max-h-[115px] object-contain drop-shadow-[0_0_10px_rgba(16,185,129,0.35)] select-none pointer-events-none"
+                      draggable={false}
+                    />
+                  </motion.div>
                 </div>
 
-                {/* Ball in Motion */}
-                {lastShotDir && (
-                  <motion.div
-                    className="absolute z-20 text-xl"
-                    initial={{ bottom: '8px', left: '50%', x: '-50%', scale: 1.4 }}
-                    animate={{
-                      bottom: '75px',
-                      left: lastShotDir === 'left' ? '20%' : lastShotDir === 'right' ? '80%' : '50%',
-                      scale: 0.85
-                    }}
-                    transition={{ duration: 0.4, ease: 'easeOut' }}
+                {/* Interactive Target Zones Overlay */}
+                <div className="absolute inset-0 grid grid-cols-3 p-2 z-15">
+                  <button
+                    type="button"
+                    disabled={shotState === 'shooting'}
+                    onClick={() => handleShoot('left')}
+                    aria-label={t('arcade.aim_left')}
+                    className="border border-dashed border-emerald-500/25 hover:border-emerald-400/60 hover:bg-emerald-500/10 rounded-lg flex items-start justify-center pt-2 transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-emerald-500"
                   >
-                    ⚽
-                  </motion.div>
-                )}
+                    <span className="px-2 py-0.5 rounded bg-stone-900/85 border border-emerald-500/30 text-[10px] font-mono text-emerald-400 font-bold tracking-wider shadow-sm">
+                      LEFT [1]
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    disabled={shotState === 'shooting'}
+                    onClick={() => handleShoot('center')}
+                    aria-label={t('arcade.aim_center')}
+                    className="border border-dashed border-emerald-500/25 hover:border-emerald-400/60 hover:bg-emerald-500/10 rounded-lg flex items-start justify-center pt-2 transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-emerald-500"
+                  >
+                    <span className="px-2 py-0.5 rounded bg-stone-900/85 border border-emerald-500/30 text-[10px] font-mono text-emerald-400 font-bold tracking-wider shadow-sm">
+                      CENTER [2]
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    disabled={shotState === 'shooting'}
+                    onClick={() => handleShoot('right')}
+                    aria-label={t('arcade.aim_right')}
+                    className="border border-dashed border-emerald-500/25 hover:border-emerald-400/60 hover:bg-emerald-500/10 rounded-lg flex items-start justify-center pt-2 transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-emerald-500"
+                  >
+                    <span className="px-2 py-0.5 rounded bg-stone-900/85 border border-emerald-500/30 text-[10px] font-mono text-emerald-400 font-bold tracking-wider shadow-sm">
+                      RIGHT [3]
+                    </span>
+                  </button>
+                </div>
+
+                {/* Penalty spot turf marking */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none z-10">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-400/80 shadow-[0_0_8px_rgba(16,185,129,0.5)] mb-1" />
+                </div>
+
+                {/* Ball at penalty spot or in motion */}
+                <motion.div
+                  className="absolute z-20 text-2xl pointer-events-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                  initial={false}
+                  animate={{
+                    bottom: shotState === 'idle' ? '10px' : '82px',
+                    left: !lastShotDir || shotState === 'idle'
+                      ? '50%'
+                      : lastShotDir === 'left' ? '18%' : lastShotDir === 'right' ? '82%' : '50%',
+                    scale: shotState === 'idle' ? 1.15 : 0.85,
+                    rotate: !lastShotDir || shotState === 'idle'
+                      ? 0
+                      : lastShotDir === 'left' ? -180 : lastShotDir === 'right' ? 180 : 0
+                  }}
+                  transition={{ duration: 0.42, ease: 'easeOut' }}
+                  style={{ x: '-50%' }}
+                >
+                  ⚽
+                </motion.div>
               </div>
 
               {/* Status commentary banner */}
