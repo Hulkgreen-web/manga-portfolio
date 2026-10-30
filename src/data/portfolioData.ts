@@ -106,10 +106,12 @@ export const portfolioData = {
     {
       company: "I-CITY Bruxelles",
       translationKey: "icity",
+      tags: ["Java", "Scrum / Agile", "Git"],
     },
     {
       company: "Institut Sacré-Coeur Mons",
       translationKey: "sacrecoeur",
+      tags: ["Enseignement", "Pédagogie & Vulgarisation", "Communication", "Anglais"],
     },
   ] as Experience[],
 };

@@ -106,6 +106,11 @@
           "Participation en équipe à la conception et au développement du MVP d'I-Car, application mobile de gestion de flotte automobile (suivi, car policy, entretiens).",
           "Conception et intégration d'un tunnel de communication sécurisé entre utilisateurs pour organiser l'échange de véhicules avec garantie d'authenticité et de confidentialité.",
           "Livraison d'un MVP fonctionnel et testé, validant avec succès le concept et les parcours clés auprès du client."
+        ],
+        "tags": [
+          "React PWA",
+          "Fastify",
+          "MongoDB"
         ]
       },
       "triptyk": {
@@ -116,23 +121,44 @@
           "Conception et implémentation de l'API backend (Node.js, Fastify) et contribution à l'interface de suivi (Ember.js).",
           "Intégration de l'IA dans les automatisations n8n pour optimiser le traitement des flux de travail.",
           "Mise en place du Human-in-the-Loop (l'IA propose, l'humain valide) : défi relevé de rendre l'IA utilisable en toute confiance par des équipes non techniques, avec contrôle humain à chaque étape critique."
+        ],
+        "tags": [
+          "Node.js",
+          "Fastify",
+          "n8n",
+          "Ember.js"
         ]
       },
       "icity": {
         "position": "Stagiaire Développeur Java (Observation)",
         "period": "Juillet 2023 - Août 2023",
         "description": [
-          "Immersion dans les processus de gestion de projet au sein d'une structure publique IT.",
-          "Application pratique de la méthodologie Agile / SCRUM lors des cycles de sprint.",
-          "Utilisation rigoureuse des bonnes pratiques de versionnage collaboratif avec Git."
+          "Stage d'observation au sein d'une équipe de développeurs Java, pour découvrir le fonctionnement d'un projet logiciel en conditions réelles.",
+          "Méthode Scrum : participation en observateur aux cérémonies (daily, sprint planning, review, rétrospective) et compréhension du rôle de chaque membre de l'équipe.",
+          "Organisation d'un projet Java : découverte de la structure d'un projet, de la répartition du travail et des bonnes pratiques d'équipe.",
+          "Culture d'équipe : observation de la collaboration entre développeurs, de la communication et du suivi de l'avancement, apportant une vision concrète de l'agilité appliquée dans mes projets actuels."
+        ],
+        "tags": [
+          "Java",
+          "Scrum / Agile",
+          "Git"
         ]
       },
       "sacrecoeur": {
-        "position": "Stage d'immersion pédagogique",
+        "position": "Stage d'enseignement de l'anglais (Immersion pédagogique)",
         "period": "Février 2022",
         "description": [
-          "Gestion et animation de groupes en environnement éducatif.",
-          "Développement des compétences d'écoute active, de pédagogie et de communication claire."
+          "Préparation et animation de cours : structuration du contenu, progression pédagogique et adaptation au niveau des élèves.",
+          "Vulgarisation : rendre accessible une matière à des profils très différents.",
+          "Gestion de groupe : capter l'attention, gérer l'imprévu et faire participer chacun.",
+          "Communication : formulation d'un feedback clair et bienveillant favorisant la progression.",
+          "Apport pour le métier de développeur : capacité à expliquer simplement des notions complexes, à m'adapter à mes interlocuteurs (techniques comme métier) et maîtrise d'un anglais fluide au quotidien dans la tech."
+        ],
+        "tags": [
+          "Enseignement",
+          "Pédagogie & Vulgarisation",
+          "Communication",
+          "Anglais"
         ]
       }
     },

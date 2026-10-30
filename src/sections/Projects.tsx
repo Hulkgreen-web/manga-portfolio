@@ -182,7 +182,10 @@ export const Projects = () => {
                 <div className="p-6 sm:p-7 flex flex-col flex-grow">
                   {/* Tech stack tags */}
                   <div className="flex gap-1.5 mb-4 flex-wrap" aria-label="Technologies used">
-                    {project.tags.map(tag => (
+                    {(Array.isArray(t(`portfolio.projects.${project.translationKey}.tags`, { returnObjects: true }))
+                      ? (t(`portfolio.projects.${project.translationKey}.tags`, { returnObjects: true }) as string[])
+                      : project.tags
+                    ).map(tag => (
                       <span 
                         key={tag} 
                         className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-medium bg-stone-100 dark:bg-stone-900 text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-800"
